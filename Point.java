@@ -1,4 +1,12 @@
-
+/******************************************************************************
+ *  Compilation:  javac Point.java
+ *  Execution:    java Point
+ *  Dependencies: none
+ *  
+ *  An immutable data type for points in the plane.
+ *  For use on Coursera, Algorithms Part I programming assignment.
+ *
+ ******************************************************************************/
 
 import edu.princeton.cs.algs4.StdDraw;
 
@@ -130,10 +138,24 @@ public class Point implements Comparable<Point> {
         return 0;
     }
 
+    /**
+     * Compares two points by the slope they make with this point.
+     * The slope is defined as in the slopeTo() method.
+     *
+     * @return the Comparator that defines this ordering on points
+     */
     public Comparator<Point> slopeOrder() {
         return new PointComparator();
     }
 
+
+    /**
+     * Returns a string representation of this point.
+     * This method is provide for debugging;
+     * your program should not rely on the format of the string representation.
+     *
+     * @return a string representation of this point
+     */
     public String toString() {
         /* DO NOT MODIFY */
         return "(" + x + ", " + y + ")";
